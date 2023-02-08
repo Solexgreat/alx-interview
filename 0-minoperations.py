@@ -1,4 +1,8 @@
+#!/usr/bin/python3
+"""Return the minimum Operation used"""
+
 def minOperations(n):
+    """function calculate the minimum operation to get th arg(n)"""
     H = 1
     i = 0
     while H < n:
