@@ -8,9 +8,9 @@ def minOperations(n):
     i = 0
     while H < n:
         if H == 1 or n % H == 0:
-            H *= 2 
+            H *= 2
             i += 2
         else:
-            H += H
+            H += H/2
             i += 1
-    return (i) 
+    return (i)
