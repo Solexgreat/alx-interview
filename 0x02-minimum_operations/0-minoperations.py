@@ -16,8 +16,6 @@ def minOperations(n):
             break
         H += 1
         result = False
-    if result == False:
-        return (0)
     if result:
         H = 1
         while H < n:
@@ -28,3 +26,5 @@ def minOperations(n):
                 H += H/2
                 i += 1
         return(i)
+    else:
+        return(0)    
