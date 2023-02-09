@@ -2,10 +2,10 @@
 """Return the minimum Operation used"""
 
 
-def minOperations(n : int)-> int:
+def minOperations(n: int)-> int:
     """function calculate the minimum operation to get to (n)"""
-    H : int = 1
-    i : int = 0
+    H: int = 1
+    i: int = 0
     result = False
     if type(n) != int or n < 0 or n == 1:
         return (0)
