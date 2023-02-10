@@ -4,6 +4,8 @@
 
 def minOperations(n):
     """function calculate the minimum operation to get to (n)"""
+
+
     if not isinstance(n, int) or n < 2:
         return (0)
 
@@ -11,10 +13,11 @@ def minOperations(n):
     i = 0
 
     while H < n:
-        if n % H == 0:
+        rest = n - H
+        if rest % H == 0:
             H *= 2
             i += 2
         else:
             H += H/2
             i += 1
-    return(i)
+    return (i)
