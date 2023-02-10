@@ -7,7 +7,7 @@ def minOperations(n):
     H = 1
     i = 0
 
-    if isinstance(n, int) or n < 2:
+    if not isinstance(n, int) or n < 2:
         return (0)
   
     while H < n:
