@@ -17,4 +17,4 @@ def minOperations(n):
         else:
             H += H/2
             i += 1
-        return(i)
+    return(i)
