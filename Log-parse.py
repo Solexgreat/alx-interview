@@ -29,6 +29,6 @@ try:
             continue
 except KeyboardInterrupt:
     for i, j in status_code.items():
-                if j > 0:
-                    print(f"{i}: {j}")
+        if j > 0:
+            print(f"{i}: {j}")
     raise                
