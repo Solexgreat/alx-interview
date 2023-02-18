@@ -13,10 +13,9 @@ for line in sys.stdin:
     index += 1
     if KeyboardInterrupt and index == 10:
         index = 0
-        print(f"File size: {total_size}")
-        for i,j in status_code.items():
+        for i, j in status_code.items():
             if j > 0:
-                print(f"{i}:{j}")    
+                print(f"{i}: {j}")
     if re.match(r'^\S+ - \[.+\] "GET /projects/260 HTTP/1.1" \d{3} \d+$', line):
         match = re.search(r'"GET /projects/260 HTTP/1.1" (\d+) (\d+$)', line)
         if match:
