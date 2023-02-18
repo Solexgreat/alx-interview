@@ -21,8 +21,8 @@ for line in sys.stdin:
         match = re.search(r'"GET /projects/260 HTTP/1.1" (\d+) (\d+$)', line)
         if match:
             code = match.group(1)
-        if str(code) == status_code.keys():
-            status_code[str(code)] += 1
+            if code in status_code:
+                status_code[code] += 1
         file = match.group(2)
         total_size += int(file)
     else:
