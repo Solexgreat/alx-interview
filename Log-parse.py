@@ -24,6 +24,6 @@ for line in sys.stdin:
             if str(code) == status_code.keys():
                 status_code[str(code)] += 1
         file = match.group(2)
-        total_size += file
+        total_size += int(file)
     else:
         continue    
