@@ -17,4 +17,4 @@ def validUTF8(data):
         else:
             result = False 
             break
-    return (result)
+    return(result)
