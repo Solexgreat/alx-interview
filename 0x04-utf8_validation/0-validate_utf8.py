@@ -15,6 +15,6 @@ def validUTF8(data):
         if len(num) <= 8:
             result = True
         else:
-            result = False 
+            result = False
             break
     return(result)
