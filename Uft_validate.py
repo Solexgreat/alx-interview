@@ -3,10 +3,6 @@
 
 
 
-
-
-
-
 def validUTF8(data):
     """
     method that determines if a given data set
