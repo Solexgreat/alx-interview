@@ -9,23 +9,12 @@ def validUTF8(data):
     Prototype: def validUTF8(data)
     Return: True if data is a valid UTF-8 encoding, else return False
     """
-    nbytes = 0
-
-    byte1 = 1 << 7
-    byte2 = 1 << 6
-
-    for number in data:
-        b = 1 << 7
-        if nbytes == 0:
-            while b & number:
-                nbytes += 1
-                b = b >> 1
-            if nbytes == 0:
-                continue
-            if nbytes == 1 or nbytes > 4:
-                return False
+    result = False
+    for i in range(len(data)):
+        num = str(bin(data[i])[2:])
+        if len(num) <= 8:
+            result = True
         else:
-            if not (number & byte1 and not (number & byte2)):
-                return False
-        nbytes -= 1
-    return nbytes == 0
+            result = False
+            break
+    return (result)
