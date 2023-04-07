@@ -21,7 +21,7 @@ def calculate_primes(number, primes):
                 primes.append(0)
 
 
-def isWinner(y, nums):
+def isWinner(y, num):
     """
     y is the number of rounds and nums is an array of n
     Return: name of the player that won the most rounds
@@ -33,7 +33,7 @@ def isWinner(y, nums):
 
     primes = [0, 0, 2]
 
-    calculate_primes(max(nums), primes)
+    calculate_primes(max(num), primes)
 
     for round in range(y):
         sum_options = sum((i != 0 and i <= nums[round])
